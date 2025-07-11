@@ -32,30 +32,30 @@ const (
 
 // 使用iota的枚举
 const (
-	Sunday = iota // 0
-	Monday        // 1
-	Tuesday       // 2
-	Wednesday     // 3
-	Thursday      // 4
-	Friday        // 5
-	Saturday      // 6
+	Sunday    = iota // 0
+	Monday           // 1
+	Tuesday          // 2
+	Wednesday        // 3
+	Thursday         // 4
+	Friday           // 5
+	Saturday         // 6
 )
 
 // 复杂的iota示例
 const (
 	_  = iota             // 0 被忽略
 	KB = 1 << (10 * iota) // 1024
-	MB                    // 1048576  
+	MB                    // 1048576
 	GB                    // 1073741824
 )
 
 // HTTP状态码常量
 const (
-	StatusOK          = 200
-	StatusBadRequest  = 400
+	StatusOK           = 200
+	StatusBadRequest   = 400
 	StatusUnauthorized = 401
-	StatusNotFound    = 404
-	StatusServerError = 500
+	StatusNotFound     = 404
+	StatusServerError  = 500
 )
 
 func main() {
@@ -92,9 +92,9 @@ func demonstrateVariableDeclarations() {
 	fmt.Printf("完整声明 - 姓名: %s, 年龄: %d, 工资: %.2f\n", name, age, salary)
 
 	// 方式2：类型推断
-	var department = "技术部"     // 推断为string
-	var experience = 3        // 推断为int
-	var bonus = 2000.0        // 推断为float64
+	var department = "技术部" // 推断为string
+	var experience = 3     // 推断为int
+	var bonus = 2000.0     // 推断为float64
 
 	fmt.Printf("类型推断 - 部门: %s, 经验: %d年, 奖金: %.2f\n", department, experience, bonus)
 
@@ -123,20 +123,20 @@ func demonstrateVariableDeclarations() {
 	fmt.Printf("多变量声明 - x=%d, y=%d, z=%d, a=%s, b=%t, c=%d\n", x, y, z, a, b, c)
 
 	/*
-	Java等价代码对比：
-	
-	// Java方式（类型在前）
-	String name = "张三";
-	int age = 25;
-	double salary = 8500.50;
-	
-	// Java没有类型推断的简短声明
-	String department = "技术部";
-	int experience = 3;
-	
-	// Java没有:=这样的简短声明语法
-	String position = "高级工程师";
-	boolean isManager = false;
+		Java等价代码对比：
+
+		// Java方式（类型在前）
+		String name = "张三";
+		int age = 25;
+		double salary = 8500.50;
+
+		// Java没有类型推断的简短声明
+		String department = "技术部";
+		int experience = 3;
+
+		// Java没有:=这样的简短声明语法
+		String position = "高级工程师";
+		boolean isManager = false;
 	*/
 
 	fmt.Println()
@@ -169,7 +169,7 @@ func demonstrateDataTypes() {
 	// 字符串和字符
 	var str string = "Hello, 世界"
 	var r rune = '中' // rune是int32的别名，用于Unicode码点
-	var b byte = 'A'  // byte是uint8的别名
+	var b byte = 'A' // byte是uint8的别名
 
 	fmt.Printf("字符串: %s, 字符(rune): %c(%d), 字节(byte): %c(%d)\n", str, r, r, b, b)
 
@@ -191,21 +191,21 @@ func demonstrateDataTypes() {
 		unsafe.Sizeof(i32), unsafe.Sizeof(f64), unsafe.Sizeof(str))
 
 	/*
-	Java对比：
-	
-	// Java的基本类型
-	byte b = 127;        // 1字节
-	short s = 32767;     // 2字节  
-	int i = 2147483647;  // 4字节
-	long l = 9223372036854775807L; // 8字节
-	
-	float f = 3.14f;     // 4字节
-	double d = 3.14159;  // 8字节
-	
-	char c = 'A';        // 2字节，UTF-16
-	boolean flag = true; // JVM实现相关
-	
-	String str = "Hello"; // 引用类型，对象在堆上
+		Java对比：
+
+		// Java的基本类型
+		byte b = 127;        // 1字节
+		short s = 32767;     // 2字节
+		int i = 2147483647;  // 4字节
+		long l = 9223372036854775807L; // 8字节
+
+		float f = 3.14f;     // 4字节
+		double d = 3.14159;  // 8字节
+
+		char c = 'A';        // 2字节，UTF-16
+		boolean flag = true; // JVM实现相关
+
+		String str = "Hello"; // 引用类型，对象在堆上
 	*/
 
 	fmt.Println()
@@ -238,25 +238,25 @@ func demonstrateConstants() {
 	}
 
 	/*
-	Java等价代码：
-	
-	// Java常量
-	public static final double PI = 3.14159;
-	public static final int MAX_USERS = 1000;
-	public static final String APP_NAME = "Go学习程序";
-	
-	// Java枚举
-	public enum Weekday {
-	    SUNDAY(0), MONDAY(1), TUESDAY(2), WEDNESDAY(3),
-	    THURSDAY(4), FRIDAY(5), SATURDAY(6);
-	    
-	    private final int value;
-	    Weekday(int value) { this.value = value; }
-	    public int getValue() { return value; }
-	}
-	
-	// 使用
-	Weekday today = Weekday.WEDNESDAY;
+		Java等价代码：
+
+		// Java常量
+		public static final double PI = 3.14159;
+		public static final int MAX_USERS = 1000;
+		public static final String APP_NAME = "Go学习程序";
+
+		// Java枚举
+		public enum Weekday {
+		    SUNDAY(0), MONDAY(1), TUESDAY(2), WEDNESDAY(3),
+		    THURSDAY(4), FRIDAY(5), SATURDAY(6);
+
+		    private final int value;
+		    Weekday(int value) { this.value = value; }
+		    public int getValue() { return value; }
+		}
+
+		// 使用
+		Weekday today = Weekday.WEDNESDAY;
 	*/
 
 	fmt.Println()
@@ -307,22 +307,22 @@ func demonstrateTypeConversions() {
 	}
 
 	/*
-	Java对比：
-	
-	// Java的类型转换
-	int i = 42;
-	double f = i;              // 自动转换（向上转型）
-	int j = (int) f;           // 强制转换（向下转型）
-	
-	// Java的字符串转换
-	int age = 25;
-	String ageStr = String.valueOf(age);  // 或 Integer.toString(age)
-	
-	try {
-	    int num = Integer.parseInt("123");
-	} catch (NumberFormatException e) {
-	    // 异常处理
-	}
+		Java对比：
+
+		// Java的类型转换
+		int i = 42;
+		double f = i;              // 自动转换（向上转型）
+		int j = (int) f;           // 强制转换（向下转型）
+
+		// Java的字符串转换
+		int age = 25;
+		String ageStr = String.valueOf(age);  // 或 Integer.toString(age)
+
+		try {
+		    int num = Integer.parseInt("123");
+		} catch (NumberFormatException e) {
+		    // 异常处理
+		}
 	*/
 
 	fmt.Println()
@@ -359,30 +359,30 @@ func demonstrateScope() {
 	// i和loopVar在这里不可访问
 
 	/*
-	Java对比：
-	
-	public class ScopeExample {
-	    // 类级别变量
-	    private static String classVar = "类变量";
-	    
-	    public static void main(String[] args) {
-	        // 方法级别变量
-	        String methodVar = "方法变量";
-	        
-	        if (true) {
-	            // 块级别变量（Java 10+支持var）
-	            String blockVar = "块变量";
-	            System.out.println(methodVar + ", " + blockVar);
-	        }
-	        // blockVar在这里不可访问
-	        
-	        for (int i = 0; i < 3; i++) {
-	            String loopVar = "循环变量_" + i;
-	            System.out.println(loopVar);
-	        }
-	        // i和loopVar在这里不可访问
-	    }
-	}
+		Java对比：
+
+		public class ScopeExample {
+		    // 类级别变量
+		    private static String classVar = "类变量";
+
+		    public static void main(String[] args) {
+		        // 方法级别变量
+		        String methodVar = "方法变量";
+
+		        if (true) {
+		            // 块级别变量（Java 10+支持var）
+		            String blockVar = "块变量";
+		            System.out.println(methodVar + ", " + blockVar);
+		        }
+		        // blockVar在这里不可访问
+
+		        for (int i = 0; i < 3; i++) {
+		            String loopVar = "循环变量_" + i;
+		            System.out.println(loopVar);
+		        }
+		        // i和loopVar在这里不可访问
+		    }
+		}
 	*/
 
 	fmt.Println()
@@ -420,22 +420,22 @@ func demonstrateZeroValues() {
 	}
 
 	/*
-	Java对比：
-	
-	// Java的默认值（成员变量）
-	class Example {
-	    int intDefault;        // 0
-	    double doubleDefault;  // 0.0
-	    boolean boolDefault;   // false
-	    String stringDefault;  // null
-	    List<String> listDefault; // null
-	}
-	
-	// 局部变量必须初始化
-	public void method() {
-	    int local;  // 编译错误：变量未初始化
-	    // System.out.println(local);
-	}
+		Java对比：
+
+		// Java的默认值（成员变量）
+		class Example {
+		    int intDefault;        // 0
+		    double doubleDefault;  // 0.0
+		    boolean boolDefault;   // false
+		    String stringDefault;  // null
+		    List<String> listDefault; // null
+		}
+
+		// 局部变量必须初始化
+		public void method() {
+		    int local;  // 编译错误：变量未初始化
+		    // System.out.println(local);
+		}
 	*/
 
 	fmt.Println()
@@ -485,4 +485,4 @@ Go变量和数据类型总结：
 - Go通过首字母控制可见性
 - Go的错误处理更显式
 - Go的语法更简洁
-*/ 
+*/
