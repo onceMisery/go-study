@@ -15,7 +15,7 @@ func mapBasics() {
 	// Map声明和初始化
 	var map1 map[string]int      // nil map，不能写入
 	map2 := make(map[string]int) // 空map，可以写入
-	map3 := map[string]int{      // 字面量初始化
+	map3 := map[string]int{ // 字面量初始化
 		"apple":  100,
 		"banana": 50,
 		"orange": 75,
@@ -394,7 +394,7 @@ func mapPerformanceNotes() {
 	var nilMap map[string]int
 	safeMap := make(map[string]int)
 
-	// nilMap["key"] = 1 // 运行时panic
+	nilMap["key"] = 1 // 运行时panic
 	safeMap["key"] = 1
 
 	fmt.Printf("安全Map: %v\n", safeMap)

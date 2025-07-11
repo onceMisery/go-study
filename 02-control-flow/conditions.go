@@ -162,6 +162,7 @@ func businessLogicConditions() {
 		{"赵六", 22, true, "user"},
 	}
 
+	// 类似java中的 for (User user : users) {}
 	for _, user := range users {
 		fmt.Printf("\n检查用户: %s\n", user.Name)
 

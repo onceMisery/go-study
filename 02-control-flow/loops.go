@@ -54,11 +54,13 @@ func rangeLoops() {
 	numbers := []int{10, 20, 30, 40, 50}
 
 	fmt.Println("1. 遍历切片（获取索引和值）:")
+	// 类似 for (int i = 0; i < array.length; i++)
 	for index, value := range numbers {
 		fmt.Printf("  索引%d: 值%d\n", index, value)
 	}
 
 	fmt.Println("2. 只遍历值（忽略索引）:")
+	// for (Type value : collection)
 	for _, value := range numbers {
 		fmt.Printf("  值: %d\n", value)
 	}
