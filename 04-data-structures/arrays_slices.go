@@ -181,7 +181,7 @@ func sliceCopyAndClone() {
 }
 
 // 3. 实际应用场景
-func practicalExamples() {
+func practicalExamples1() {
 	fmt.Println("\n=== 实际应用场景 ===")
 
 	// 动态列表管理
@@ -386,7 +386,7 @@ func main() {
 	sliceOperations()
 	sliceMemoryBehavior()
 	sliceCopyAndClone()
-	practicalExamples()
+	practicalExamples1()
 	stringSliceExamples()
 	sortingExamples()
 	performanceConsiderations()

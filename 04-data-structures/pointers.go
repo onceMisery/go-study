@@ -343,31 +343,31 @@ func practicalExamples() {
 // 9. 指针性能和最佳实践
 func performanceAndBestPractices() {
 	fmt.Println("\n=== 性能和最佳实践 ===")
-	
+
 	// 大结构体使用指针传递
 	type LargeStruct struct {
 		Data [1000]int
 		Name string
 	}
-	
+
 	// 值传递（低效）
 	processByValue := func(ls LargeStruct) {
 		// 复制整个结构体，消耗内存和时间
 		fmt.Printf("值传递处理，名称: %s\n", ls.Name)
 	}
-	
+
 	// 指针传递（高效）
 	processByPointer := func(ls *LargeStruct) {
 		// 只传递8字节的指针
 		fmt.Printf("指针传递处理，名称: %s\n", ls.Name)
 	}
-	
+
 	large := LargeStruct{Name: "大结构体"}
-	
+
 	fmt.Println("对于大结构体:")
 	processByValue(large)    // 复制1000个int + string
 	processByPointer(&large) // 只传递指针
-	
+
 	fmt.Println("\n最佳实践:")
 	fmt.Println("1. 大结构体使用指针传递")
 	fmt.Println("2. 需要修改原值时使用指针")
@@ -400,7 +400,7 @@ func nilPointerHandling() {
 			fmt.Println("接收者是nil")
 		}
 	}
-	
+
 	var s *SafeStruct
 	s.SafeMethod() // 即使s是nil，也不会panic
 	
