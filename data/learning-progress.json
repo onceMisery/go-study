@@ -1,0 +1,74 @@
+{
+  "learningProgress": {
+    "startDate": "",
+    "currentWeek": 1,
+    "totalWeeks": 24,
+    "currentStage": "basics",
+    "completionPercentage": 0,
+    "stages": {
+      "basics": {
+        "name": "基础入门",
+        "weeks": "1-5",
+        "status": "not_started",
+        "completion": 0
+      },
+      "advanced": {
+        "name": "进阶特性", 
+        "weeks": "6-10",
+        "status": "not_started",
+        "completion": 0
+      },
+      "frameworks": {
+        "name": "框架和生态",
+        "weeks": "11-16", 
+        "status": "not_started",
+        "completion": 0
+      },
+      "projects": {
+        "name": "实战项目",
+        "weeks": "17-24",
+        "status": "not_started", 
+        "completion": 0
+      }
+    },
+    "weeklyProgress": {
+      "week1": {
+        "topic": "环境搭建和Hello World",
+        "status": "not_started",
+        "tasks_completed": 0,
+        "total_tasks": 8,
+        "notes": ""
+      },
+      "week2": {
+        "topic": "变量和数据类型",
+        "status": "not_started", 
+        "tasks_completed": 0,
+        "total_tasks": 8,
+        "notes": ""
+      }
+    }
+  },
+  "javaComparisons": {
+    "variables": {
+      "java": "强类型，显式声明",
+      "go": "类型推断 + 显式类型",
+      "notes": "Go支持简短声明(:=)，更简洁"
+    },
+    "errorHandling": {
+      "java": "异常机制(try-catch)",
+      "go": "显式错误处理(error返回值)",
+      "notes": "Go更明确，Java更便于传播"
+    }
+  },
+  "keyLearnings": [
+    "Go的简洁性和高效性",
+    "组合优于继承的设计思想",
+    "显式错误处理模式",
+    "goroutine和channel的并发模型"
+  ],
+  "challenges": [
+    "从Java的异常处理转向错误返回值",
+    "理解接口的隐式实现",
+    "掌握goroutine的并发编程"
+  ]
+} 
