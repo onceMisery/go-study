@@ -71,6 +71,20 @@ type Person struct {
 	Age  int
 }
 
+// 新增 SafeStruct 类型定义
+type SafeStruct struct {
+	value int
+}
+
+// 新增 SafeMethod 方法定义
+func (s *SafeStruct) SafeMethod() {
+	if s != nil {
+		fmt.Printf("安全调用，值: %d\n", s.value)
+	} else {
+		fmt.Println("接收者是nil")
+	}
+}
+
 func (p *Person) Birthday() {
 	p.Age++
 	fmt.Printf("%s now is %d years old\n", p.Name, p.Age)
@@ -388,20 +402,7 @@ func nilPointerHandling() {
 		fmt.Println("指针是nil，不能解引用")
 	}
 
-	// 安全的方法调用
-	type SafeStruct struct {
-		value int
-	}
-
-	(func(s *SafeStruct) SafeMethod)()
-	{
-		if s != nil {
-			fmt.Printf("安全调用，值: %d\n", s.value)
-		} else {
-			fmt.Println("接收者是nil")
-		}
-	}
-
+	// 安全的方法调用 - 类型和方法已移至顶层
 	var s *SafeStruct
 	s.SafeMethod() // 即使s是nil，也不会panic
 
